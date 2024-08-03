@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rental Home</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <h1 class="navbar_logo">Rental Home</h1>
+        <div class="navbar_search">
+            <input type="text" placeholder="Search for home" class="navbar_placeholder">
+            <button class="navbar_btn">Search</button>
+        </div>
+        <button class="navbar_toggle" onclick="toggleMenu()">☰</button>
+        <div class="navbar_right" id="navbarMenu">
+            <a href="#" class="navbar_home">Home</a>
+            <button class="navbar_logout">Log Out</button>
+            <img src="assets/WhatsApp Image 2024-08-03 at 20.22.20_7d2cf9e0.jpg" alt="Profile" class="navbar_profile">
+        </div>
+    </div>
+    <div class="sub_navb">
+        <a href="#">Mumbai</a>
+        <a href="#">Navi-Mumbai</a>
+        <a href="#">Thane</a>
+        <a href="#">Bandra</a>
+        <a href="#">Goregon</a>
+        <a href="#">Cotten Green</a>
+    </div>
+
+    <button class="create">+</button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>User Info</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <button onclick="showUpdateForm()">Update Info</button>
+        <button onclick="showResetPasswordForm()">Reset Password</button>
+        <button class="close" onclick="toggleSidebar()">✖</button>
+    </div>
+
+    <!-- Update Form -->
+    <div class="form-container" id="updateForm" style="display: none;">
+        <h2>Update Information</h2>
+        <form>
+            <label for="newEmail">New Email:</label>
+            <input type="email" id="newEmail" placeholder="Enter new email">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" placeholder="Enter new password">
+            <button type="submit">Update</button>
+            <button type="button" onclick="hideUpdateForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Reset Password Form -->
+    <div class="form-container" id="resetPasswordForm" style="display: none;">
+        <h2>Reset Password</h2>
+        <form>
+            <label for="oldPassword">Old Password:</label>
+            <input type="password" id="oldPassword" placeholder="Enter old password">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" placeholder="Enter new password">
+            <button type="submit">Reset Password</button>
+            <button type="button" onclick="hideResetPasswordForm()">Cancel</button>
+        </form>
+    </div>
+
+    <script>
+
+        function toggleMenu() {
+            var menu = document.getElementById("navbarMenu");
+            menu.classList.toggle("active");
+        }
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+
+        function showUpdateForm() {
+            document.getElementById("updateForm").style.display = "block";
+            document.getElementById("resetPasswordForm").style.display = "none";
+        }
+
+        function hideUpdateForm() {
+            document.getElementById("updateForm").style.display = "none";
+        }
+
+        function showResetPasswordForm() {
+            document.getElementById("resetPasswordForm").style.display = "block";
+            document.getElementById("updateForm").style.display = "none";
+        }
+
+        function hideResetPasswordForm() {
+            document.getElementById("resetPasswordForm").style.display = "none";
+        }
+
+        var profileImages = document.getElementsByClassName('navbar_profile');
+        for (var i = 0; i < profileImages.length; i++) {
+            profileImages[i].addEventListener('click', toggleSidebar);
+        }
+    </script>
+</body>
+
+</html>
