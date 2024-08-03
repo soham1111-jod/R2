@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/steph-wilson-G4fICun7Q48-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 100%;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(8px); 
+   
+}
+
+
+
+h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: #333; 
+}
+
+button {
+    border-radius: 25px;
+    border: 1px solid #fbc02d; 
+    background-color: #fbc02d; 
+    color: #121212; 
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 200ms ease-in, transform 80ms ease-in;
+    cursor: pointer;
+    position: relative; 
+}
+
+button:hover {
+    background-color: #f9a825; 
+    border-color: #f9a825; 
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+input {
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: #333; 
+    transition: border-color 200ms ease-in;
+}
+
+input:focus {
+    border-color: #fbc02d; 
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    input {
+        padding: 10px 12px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 11px 35px;
+        font-size: 13px;
+    }
+
+    input {
+        padding: 11px 13px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 60%;
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 12px 14px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .container {
+        width: 50%;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    button {
+        padding: 12px 45px;
+        font-size: 15px;
+    }
+
+    input {
+        padding: 12px 15px;
+    }
+}
